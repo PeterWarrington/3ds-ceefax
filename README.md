@@ -88,3 +88,7 @@ curl -o romfs/cacert.pem https://curl.se/ca/cacert.pem
   and [zlib](https://zlib.net/).
 - `romfs/cacert.pem` is the Mozilla CA bundle, as distributed by the curl project
   (MPL 2.0).
+
+## AI Disclosure
+
+This project was created by guiding Claude Opus 5.5.
