@@ -1,0 +1,15 @@
+build/
+*.3dsx
+*.cia
+*.smdh
+*.elf
+*.map
+test/render_test
+test/fetch_test
+test/app_test
+test/*.bmp
+*.dSYM/
+tools/bin/
+tools/serve_cia.py
+.DS_Store
+__pycache__/
