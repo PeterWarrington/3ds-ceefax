@@ -3,7 +3,7 @@ CFLAGS := -std=c11 -D_DEFAULT_SOURCE -D_DARWIN_C_SOURCE -Wall -Wextra -g -fsanit
 SRC := ../source
 CORE := $(SRC)/ttx.c $(SRC)/render.c
 
-all: render_test fetch_test app_test
+all: render_test fetch_test app_test screenshot
 
 render_test: render_test.c $(CORE)
 	$(CC) $(CFLAGS) -o $@ $^
@@ -14,7 +14,10 @@ fetch_test: fetch_test.c $(SRC)/fetcher.c $(SRC)/ttx.c
 app_test: app_test.c $(SRC)/app.c $(SRC)/fetcher.c $(SRC)/remote.c $(CORE)
 	$(CC) $(CFLAGS) -o $@ $^ -lcurl
 
+screenshot: screenshot.c $(SRC)/app.c $(SRC)/fetcher.c $(SRC)/remote.c $(CORE)
+	$(CC) $(CFLAGS) -o $@ $^ -lcurl
+
 clean:
-	rm -rf render_test fetch_test app_test *.bmp *.dSYM
+	rm -rf render_test fetch_test app_test screenshot *.bmp *.dSYM
 
 .PHONY: all clean

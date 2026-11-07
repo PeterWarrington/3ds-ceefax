@@ -3,6 +3,8 @@
 A live teletext client for the Nintendo 3DS. It reads the
 [NMS Ceefax](https://www.nmsni.co.uk/) service directly from its public feeds.
 
+![Screenshot](docs/index-business.png)
+
 - **Top screen:** the 40×25 teletext page in the SAA5050 character set, drawn
   pixel-for-pixel with no scaling or filtering.
 - **3D:** with the 3D slider up, the page floats in front of the black background.
